@@ -5,7 +5,11 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 
 BASE_DIR=os.path.dirname(os.path.abspath(__file__))
-ImageFileName = os.path.join(BASE_DIR,'static\images\django.jpg')
+static_dir = os.path.join(BASE_DIR,'static')
+images_dir = os.path.join(static_dir,'images')
+ImageFileName = os.path.join(images_dir,'django.jpeg')
+
+
 print(ImageFileName)
 img_data = open(ImageFileName, 'rb').read()
 msg = MIMEMultipart()
